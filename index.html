@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Web Page </title>
+		<meta http-equiv="x-UA-Compatible"content="IE=edge"/>
+		<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<style type="text/css">
+		
+		
+		*{
+		margin: 0; padding:0; box-sizing: border-box;
+		font-family: 'Mulish', sans-serif;}
+		.Main{ width: 100%; height:100vh;
+			background: white; color: #fff;}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+				font-size: 1rem;
+				padding-right: 40px;
+				font-weight: bold;
+
+			}
+			a:hover{
+				color: white;
+			}
+			header{
+				position: relative;
+				padding: 1 5rem;
+			}
+			.navbar{
+				width: 100%;
+				height: 60px;
+				max-width: 1600px;
+				margin: 0 auto;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background-color: #bac3c3;
+				border: 2px black solid;
+				margin-left: 0%;
+			
+			}
+			.logo a  {
+				font-size: 1.5rem;
+				font-weight: bold;
+				padding-left: 20px;
+			}
+			.links{
+				display: flex;
+				gap: 2rem;
+			}
+			.toggle_btn{
+				color: white;
+				padding-right: 20px;
+				font-size: 1.5rem;
+				cursor: pointer;
+				display: none;
+				
+			}
+			.dropdown_menu{
+				display: none;
+				position: absolute;
+				right: 2rem;
+				top: 60px;
+				height: 0;
+				width: 300px;
+				background-color:  #ddd;
+				backdrop-filter: blur(15px);
+				border-radius: 5px;
+				overflow: hidden;
+				transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			}
+			.dropdown_menu.open{
+				height: 130px;
+			}
+			.dropdown_menu li{
+				padding: 0.7rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-bottom: 1px solid black;
+				
+			}
+		h1{
+			font-size: 4rem;
+			padding: 20px 0;
+			text-align: center;
+			color: #000;
+            margin-top: 20px;
+		}
+		p{
+			text-align: center;
+            padding: 70px;
+            font-weight: bold;
+            flex-wrap: wrap;
+		}
+		.sub-main{ width: 80vw; height: auto; margin: auto;
+			display: flex;  justify-content: space-around;
+			flex-wrap: wrap; transition: all 0.2 linear;
+            
+		}
+		.child{
+			height: 200px;
+			background:gray;
+			box-shadow: 0 0 20px #bac3c3;
+			flex:1 1 200px;
+			margin: 20px;
+            border: 2px black solid;
+		}
+		
+		.child:first-child{
+			background:gray;
+            border: 2px black solid;
+		}
+		.child:last-child{
+			background:gray;
+            border: 2px black solid;
+		}
+		@media screen and  (max-width: 768px) {
+			.Main{height:auto; 
+			margin-top: 100px;}
+			.links{
+				display: none;
+			}
+			.toggle_btn{
+				display: block;
+			}
+			.dropdown_menu{
+				display: block;
+			}
+			.dropdown_menu{
+				left: 2rem;
+				width: unset;
+
+			}
+
+
+		}
+		
+        .H31,.H32,.H33{
+    border: 3px black solid;
+    background-color: white;
+    color:black;
+    float:right;
+    padding: 10px;
+
+    
+}
+
+.H32{
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+}
+.H31{
+    background-color: palevioletred;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.H33{
+    background-color: yellowgreen;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="navbar">
+				<div class="logo"><a href="index.html" onclick="$dc.loadMenuItems('SP');">Food,LLC</a></div>
+				<ul class="links">
+					<li><a href="index1.html" onclick="$dc.loadMenuItems('SP');">Chicken</a></li>
+					<li><a href="index2.html" onclick="$dc.loadMenuItems('SP');">Beef</a></li>
+					<li><a href="index3.html" onclick="$dc.loadMenuItems('SP');">Sushi</a></li>
+					</ul>
+				<div class="toggle_btn">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</div>	
+			</div>
+			<div class="dropdown_menu ">
+				<li><a href="index1.html" onclick="$dc.loadMenuItems('SP');">Chicken</a></li>
+					<li><a href="index2.html" onclick="$dc.loadMenuItems('SP');">Beef</a></li>
+					<li><a href="index3.html" onclick="$dc.loadMenuItems('SP');">Sushi</a></li>
+
+			</div>	
+		</header>
+		<div class="Main">
+			<h1> Our Menu ! </h1>
+			<div class="sub-main">
+				<div class="child">
+					<div class="H31"><h3>Chiken</h3></div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+				</div>
+				<div class="child">
+					<div class="H32"><h3>Beef</h3></div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+				</div>
+				<div class="child">
+					<div class="H33"><h3>Sushi</h3></div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+				</div>
+			</div>
+		</div>
+		<script>
+			const toggleBtn=document.querySelector('.toggle_btn')
+			const toggleBtnIcon=document.querySelector('.toggle_btn i')
+			const dropDownMenu=document.querySelector('.dropdown_menu')
+
+			toggleBtn.onclick=function(){
+				dropDownMenu.classList.toggle('open')
+				const isOpen=dropDownMenu.classList.contains('open')
+				toggleBtnIcon.classList=isOpen
+				?"fa-solid fa-xmark"
+				:"fa-solid fa-bars"
+			}
+		</script>
+	</body>
+</html>
